@@ -1,0 +1,45 @@
+Section - B
+(4x 5 = 20)
+
+Q2) Define the term operating system. Write at least four functions of an operating
+system.
+
+03) What do you understand by the layered approach of an operating, System.
+What are the advantages and disadvantages of this approach.
+
+04) Explain the four necessary conditions for a deadlock to occur.
+
+Q5) Explain the method of contiguous allocation I detail. Also write its advantages
+and disadvantages.
+
+Q6) Assume that we have the following work load shown. All five processes
+arrive at time 0, in the order given, with the length of the CPU-burst time given
+
+in milliseconds
+Process Burst time
+Pi 10
+P2 29
+P3 3
+P4 7
+P5 12
+
+Consider the FCFS, SJF and RR (quantum = 10ms) scheduling algorithms
+for this set of processes. Which algorithm would give the minimum average
+waiting time?
+
+Section - C
+(2 x 10 = 20)
+
+Q7) Explain the various disk scheduling Algorithms in detail.
+Q8) Explain various OS Components in detail.
+
+Q9) Under what circumstances page fault occur. Consider the following reference
+string
+1,253, 45.2; 1, 5, 6,2, 152, 3. 7,6, 3,2, 1, 2, 336
+Find the number of Page Faults with FIFO, Optimal Page replacement and
+LRU with four free frames which are empty initially. Which algorithm gives
+the minimum number of page faults?
+
+HH
+
+R-397 2

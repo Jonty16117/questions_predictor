@@ -5,3 +5,6 @@ Predict important and most asked question from a given set of previous year ques
 	* python image library (PIL)
 	* pytesseract
 	* pdf2image
+	* os
+	* poppler
+	* tqdm
