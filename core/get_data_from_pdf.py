@@ -14,6 +14,7 @@ RAW_DATA_DIR = PROJECT_DIR + "/raw_data"
 
 # get training data that are in pdf
 for i in os.listdir(TRAINING_DATA_DIR):
+    
     # create a newfolder that contains all the pages of this file
     des_file_dir = f"{RAW_DATA_DIR}/{i}"
     try:
@@ -28,10 +29,12 @@ for i in os.listdir(TRAINING_DATA_DIR):
     pbar = tqdm(total=100)
     pbar_len = (100 // len(images))
     for file_number, j in enumerate(images):
+        
         # for loading bar
         time.sleep(0.5)
         pbar.update(pbar_len)
         file_name = f"{des_file_dir}/{file_number}.jpeg"
+        
         # creating image from pdf
         new_file = open(file_name, "w")
         j.save(new_file)
@@ -43,5 +46,7 @@ for i in os.listdir(TRAINING_DATA_DIR):
         result_file.write(text)
         result_file.close()
         os.remove(f"{des_file_dir}/{file_number}.jpeg")
+    
     pbar.close()
+
 print(f"Read {len(os.listdir(TRAINING_DATA_DIR))} file\\s")
