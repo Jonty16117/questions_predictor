@@ -1,0 +1,13 @@
+Explain Time sharing systems.
+Attempt any Two questions from Section - C.Explain Time sharing systems.
+Write one advantage of it.
+Define the term system call.
+List at least four system calls.
+Distinguish b/w user level and kernel level threads.
+Distinguish b/w logical and physical address space.
+Write at least two advantages of virtual memory.
+Draw the diagram of a acyclic graph directories.
+Write at least two advantages of contiguous memory Allocation.
+Distinguish between long term and short term scheduler.
+Define Access matrix in context of protection.
+List four necessary conditions for a deadlock to occur.
