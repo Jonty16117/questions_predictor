@@ -72,19 +72,27 @@ def remove_empty_ques():
     section_b_ques = list(filter(None, section_b_ques))
     section_c_ques = list(filter(None, section_c_ques)) 
 
+def save_cleaned_data():
+    global section_a_ques
+    global section_b_ques
+    global section_c_ques
+
+    #save this cleaned data
+    with open(CLEANED_DATA_DIR + "/section_a_ques" + ".txt", "w") as f:
+        for i in section_a_ques:
+            f.write(i + "\r\n")
+    with open(CLEANED_DATA_DIR + "/section_b_ques" + ".txt", "w") as f:
+        for i in section_b_ques:
+            f.write(i + "\r\n")
+    with open(CLEANED_DATA_DIR + "/section_c_ques" + ".txt", "w") as f:
+        for i in section_c_ques:
+            f.write(i + "\r\n")
+
 get_ques()
 remove_empty_ques()
+save_cleaned_data()
 
-#save this cleaned data
-with open(CLEANED_DATA_DIR + "/section_a_ques" + ".txt", "w") as f:
-    for i in section_a_ques:
-        f.write(i + "\r\n")
-with open(CLEANED_DATA_DIR + "/section_b_ques" + ".txt", "w") as f:
-    for i in section_b_ques:
-        f.write(i + "\r\n")
-with open(CLEANED_DATA_DIR + "/section_c_ques" + ".txt", "w") as f:
-    for i in section_c_ques:
-        f.write(i + "\r\n")
+
 
 
 #print(section_c_ques)
