@@ -1,5 +1,4 @@
 Explain the various disk scheduling Algorithms in detail.
-Explain the various disk scheduling Algorithms in detail.
 Explain various OS Components in detail.
 Under what circumstances page fault occur.
 LRU with four free frames which are empty initially.

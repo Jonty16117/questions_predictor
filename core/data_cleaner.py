@@ -31,18 +31,25 @@ def set_ques_flags(curr_list):
         currently_in_section_a = True
         currently_in_section_b = False
         currently_in_section_c = False
+        return True
 
     elif (re.search("(s|S)(e|E)(c|C)(t|T)(i|I)(o|O)(n|N).*[bB]\\s*.*(4|5).*(20)", curr_str)) is not None:
         section_b_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", curr_str)))
         currently_in_section_a = False
         currently_in_section_b = True
         currently_in_section_c = False
+        return True
 
     elif (re.search("(s|S)(e|E)(c|C)(t|T)(i|I)(o|O)(n|N).*[cC]\\s*.*(10).*(20)", curr_str)) is not None:
         section_c_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", curr_str)))
         currently_in_section_a = False
         currently_in_section_b = False
         currently_in_section_c = True
+        return True
+
+    else:
+        return False
+
 
 def get_ques():
     global section_a_ques
@@ -52,7 +59,8 @@ def get_ques():
     for i in tb.sentences:
         #print(i)
         #print(type(str(i)))
-        set_ques_flags(i)
+        if set_ques_flags(i):
+            continue
 
         if currently_in_section_a:
             section_a_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", str(i))))

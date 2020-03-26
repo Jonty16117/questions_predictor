@@ -1,5 +1,4 @@
 RIO.Define the term operating system.
-RIO.Define the term operating system.
 system.
 What do you understand by the layered approach of an operating, System.
 What are the advantages and disadvantages of this approach.

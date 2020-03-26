@@ -87,45 +87,89 @@ from nltk.corpus import stopwords
 PROJECT_DIR = os.path.abspath(os.path.join(".", os.pardir))
 CLEANED_DATA_DIR = PROJECT_DIR + "/cleaned_data"
 
-set_a = [[None]] # contains group of similar types of ques of section a
-set_b = [[None]]
-set_c = [[None]]
-ques_parse_tags = ['WRB', 'WP', 'WDT', 'VB', 'MD', 'JJ']
+set_a = [['']] # contains group of similar types of ques of section a
+set_b = [['']]
+set_c = [['']]
 stop_words = list(stopwords.words('english'))
-jaccard_similarity_threshold = None
+
+my_stop_words = [ \
+'abbreviate', \
+'advantage', \
+'assume', \
+'attempt', \
+'b/w', \
+'between', \
+'brief', \
+'briefly', \
+'circumstance', \
+'clean', \
+'consider', \
+'considering', \
+'could', \
+'define', \
+'detail', \
+'diagram', \
+'different', \
+'differentiate', \
+'distinguish', \
+'draw', \
+'elaborate', \
+'example', \
+'explain', \
+'find', \
+'following', \
+'how', \
+'list', \
+'method', \
+'mean', \
+'neat', \
+'reference', \
+'show', \
+'that', \
+'under', \
+'various', \
+'would', \
+'what', \
+'when', \
+'write' \
+]
+#my_stop_words.sort()
+#print(my_stop_words)
+blacklist_words = stop_words + my_stop_words
+jaccard_similarity_threshold = 0.95                                   
 
 def jaccard_similarity(sent1, sent2):
-    sw1 = TextBlob(sent1).tags
-    sw2 = TextBlob(sent2).tags
-    sent1 = []
-    sent2 = []
+    sw1 = []
+    sw2 = []
+    # sent1 = []
+    # sent2 = []
 
-    for i in sw1:
-        if i[1] not in ques_parse_tags:
-            sent1.append(i[0])
+    for i in TextBlob(sent1).words:
+        i = i.lower()
+        temp = Word(i).singularize().lemmatize()
+        if i != temp:
+            i = temp
+        if i not in blacklist_words:
+            sw1.append(i)
 
-    for i in sw2:
-        if i[1] not in ques_parse_tags:
-            sent2.append(i[0])
+    for i in TextBlob(sent2).words:
+        i = i.lower()
+        temp = Word(i).singularize().lemmatize()
+        if i != temp:
+            i = temp
+        if i not in blacklist_words:
+            sw2.append(i)
 
-    sent1 = [word.lower() for word in sent1 if not word in stop_words]
-    sent2 = [word.lower() for word in sent2 if not word in stop_words]
-
-    for i in range(len(sent1)):
-        temp = Word(sent1[i]).singularize().lemmatize()
-        if sent1[i] != temp:
-            sent1[i] = temp
-
-    for i in range(len(sent2)):
-        temp = Word(sent2[i]).singularize().lemmatize()
-        if sent2[i] != temp:
-            sent2[i] = temp
+    # print("sw1", sw1)
+    # print("sw2", sw2)
 
     intersection = set(sent1).intersection(set(sent2))
     union = set(sent1).union(set(sent2))
     # print(sent1)
     # print(sent2)
-    return len(intersection)/len(union)
+    similarity = len(intersection)/len(union)
+    #print(similarity)
+    return similarity
 
 
 def make_groups():
@@ -138,17 +182,44 @@ def make_groups():
         while line:
             found_group = False
             for s in set_a:
-                if jaccard_similarity(line, s[0]) >= jaccard_similarity_threshold:
+                if jaccard_similarity(line, s[0]) >= \
+                jaccard_similarity_threshold:
                     s.append(line)
                     found_group = True
             if not found_group:
                 set_a.append([line])
             line = f.readline()
+    set_a.pop(0)
 
+    with open(CLEANED_DATA_DIR + "/section_b_ques.txt", "r") as f:
+        line = f.readline()
+        while line:
+            found_group = False
+            for s in set_b:
+                if jaccard_similarity(line, s[0]) >= \
+                jaccard_similarity_threshold:
+                    s.append(line)
+                    found_group = True
+            if not found_group:
+                set_b.append([line])
+            line = f.readline()
+    set_b.pop(0)
 
+    with open(CLEANED_DATA_DIR + "/section_c_ques.txt", "r") as f:
+        line = f.readline()
+        while line:
+            found_group = False
+            for s in set_c:
+                if jaccard_similarity(line, s[0]) >= \
+                jaccard_similarity_threshold:
+                    s.append(line)
+                    found_group = True
+            if not found_group:
+                set_c.append([line])
+            line = f.readline()
+    set_c.pop(0)
 
-
-#sent1 = [word for word in "what do you mean by time sharing systems?".split() if not word in stop_words]
-#print(sent1)
-i = jaccard_similarity("Explain Time sharing systems.", "what do you mean by time sharing systems?")
-print(i)
+make_groups()
+print(len(set_a), len(set_b), len(set_c))
+# for i in set_a:
+#     print(i)
