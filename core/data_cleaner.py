@@ -6,10 +6,10 @@ PROJECT_DIR = os.path.abspath(os.path.join(".", os.pardir))
 RAW_DATA_DIR = PROJECT_DIR + "/raw_data"
 CLEANED_DATA_DIR = PROJECT_DIR + "/cleaned_data"
 
+#importing data from raw_data.txt file to TextBlob
 raw_data = None
 with open(f"{RAW_DATA_DIR}/raw_data.txt") as f:
     raw_data = f.read()
-
 tb = TextBlob(raw_data)
 
 section_a_ques = []
@@ -19,7 +19,6 @@ section_c_ques = []
 currently_in_section_a = False
 currently_in_section_b = False
 currently_in_section_c = False
-
 
 def set_ques_flags(curr_list):
     global currently_in_section_a
@@ -50,15 +49,12 @@ def set_ques_flags(curr_list):
     else:
         return False
 
-
 def get_ques():
     global section_a_ques
     global section_b_ques
     global section_c_ques
 
     for i in tb.sentences:
-        #print(i)
-        #print(type(str(i)))
         if set_ques_flags(i):
             continue
 
@@ -85,32 +81,17 @@ def save_cleaned_data():
     global section_b_ques
     global section_c_ques
 
-    #save this cleaned data
+    #saving this cleaned data
     with open(CLEANED_DATA_DIR + "/section_a_ques" + ".txt", "w") as f:
         for i in section_a_ques:
-            f.write(i + "\r\n")
+            f.write(i + os.linesep)
     with open(CLEANED_DATA_DIR + "/section_b_ques" + ".txt", "w") as f:
         for i in section_b_ques:
-            f.write(i + "\r\n")
+            f.write(i + os.linesep)
     with open(CLEANED_DATA_DIR + "/section_c_ques" + ".txt", "w") as f:
         for i in section_c_ques:
-            f.write(i + "\r\n")
+            f.write(i + os.linesep)
 
 get_ques()
 remove_empty_ques()
 save_cleaned_data()
-
-
-
-
-#print(section_c_ques)
-# print("+++++++++++++++++++section_a_ques+++++++++++++++++++")
-# for i in section_a_ques:
-#     print(i)
-# print("+++++++++++++++++++section_b_ques+++++++++++++++++++")
-# for i in section_b_ques:
-#     print(i)
-# print("+++++++++++++++++++section_c_ques+++++++++++++++++++")
-# for i in section_c_ques:
-#     print(i)
-

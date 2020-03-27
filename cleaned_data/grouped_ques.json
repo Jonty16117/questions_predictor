@@ -1,0 +1,91 @@
+{
+    "Questions": {
+        "Section A": {
+            "group 0": [
+                "Explain Time sharing systems."
+            ],
+            "group 1": [
+                "Write one advantage of it."
+            ],
+            "group 2": [
+                "Define the term system call."
+            ],
+            "group 3": [
+                "List at least four system calls."
+            ],
+            "group 4": [
+                "Distinguish b/w user level and kernel level threads."
+            ],
+            "group 5": [
+                "Distinguish b/w logical and physical address space."
+            ],
+            "group 6": [
+                "Write at least two advantages of virtual memory."
+            ],
+            "group 7": [
+                "Draw the diagram of a acyclic graph directories."
+            ],
+            "group 8": [
+                "Write at least two advantages of contiguous memory Allocation."
+            ],
+            "group 9": [
+                "Distinguish between long term and short term scheduler."
+            ],
+            "group 10": [
+                "Define Access matrix in context of protection."
+            ],
+            "group 11": [
+                "List four necessary conditions for a deadlock to occur."
+            ]
+        },
+        "Section B": {
+            "group 0": [
+                "RIO.Define the term operating system."
+            ],
+            "group 1": [
+                "system."
+            ],
+            "group 2": [
+                "What do you understand by the layered approach of an operating, System."
+            ],
+            "group 3": [
+                "What are the advantages and disadvantages of this approach."
+            ],
+            "group 4": [
+                "Explain the four necessary conditions for a deadlock to occur."
+            ],
+            "group 5": [
+                "Explain the method of contiguous allocation I detail."
+            ],
+            "group 6": [
+                "and disadvantages."
+            ],
+            "group 7": [
+                "Assume that we have the following work load shown."
+            ],
+            "group 8": [
+                "for this set of processes."
+            ],
+            "group 9": [
+                "waiting time?"
+            ]
+        },
+        "Section C": {
+            "group 0": [
+                "Explain the various disk scheduling Algorithms in detail."
+            ],
+            "group 1": [
+                "Explain various OS Components in detail."
+            ],
+            "group 2": [
+                "Under what circumstances page fault occur."
+            ],
+            "group 3": [
+                "LRU with four free frames which are empty initially."
+            ],
+            "group 4": [
+                "the minimum number of page faults?"
+            ]
+        }
+    }
+}

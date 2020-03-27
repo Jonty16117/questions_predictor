@@ -76,10 +76,8 @@ Step 4):
 3) Produce the final result file in the required format
 '''
 
-
-
-
 import os
+import json
 from textblob import TextBlob
 from textblob import Word
 from nltk.corpus import stopwords
@@ -133,17 +131,13 @@ my_stop_words = [ \
 'when', \
 'write' \
 ]
-#my_stop_words.sort()
-#print(my_stop_words)
+
 blacklist_words = stop_words + my_stop_words
 jaccard_similarity_threshold = 0.95                                   
 
 def jaccard_similarity(sent1, sent2):
     sw1 = []
     sw2 = []
-    # sent1 = []
-    # sent2 = []
-
     for i in TextBlob(sent1).words:
         i = i.lower()
         temp = Word(i).singularize().lemmatize()
@@ -160,17 +154,10 @@ def jaccard_similarity(sent1, sent2):
         if i not in blacklist_words:
             sw2.append(i)
 
-    # print("sw1", sw1)
-    # print("sw2", sw2)
-
     intersection = set(sent1).intersection(set(sent2))
     union = set(sent1).union(set(sent2))
-    # print(sent1)
-    # print(sent2)
     similarity = len(intersection)/len(union)
-    #print(similarity)
     return similarity
-
 
 def make_groups():
     global set_a
@@ -219,7 +206,47 @@ def make_groups():
             line = f.readline()
     set_c.pop(0)
 
+def export_groups_to_json():
+    f = open(CLEANED_DATA_DIR + "/grouped_ques.json", 'w', encoding='utf-8')
+    temp_dict = {}
+
+    inner_temp_dict = dict()
+    for i in range(len(set_a)):
+        curr_key = "group " + str(i)
+        for j in set_a[i]:
+            curr_list = inner_temp_dict.get(curr_key)
+            if curr_list is None:
+                curr_list = []
+            curr_list.append(j.strip())
+            inner_temp_dict.update({curr_key: curr_list})
+    temp_dict.update({"Section A": inner_temp_dict})
+    
+    inner_temp_dict = dict()
+    for i in range(len(set_b)):
+        curr_key = "group " + str(i)
+        for j in set_b[i]:
+            curr_list = inner_temp_dict.get(curr_key)
+            if curr_list is None:
+                curr_list = []
+            curr_list.append(j.strip())
+            inner_temp_dict.update({curr_key: curr_list})
+    temp_dict.update({"Section B": inner_temp_dict})
+    
+    inner_temp_dict = dict()
+    for i in range(len(set_c)):
+        curr_key = "group " + str(i)
+        for j in set_c[i]:
+            curr_list = inner_temp_dict.get(curr_key)
+            if curr_list is None:
+                curr_list = []
+            curr_list.append(j.strip())
+            inner_temp_dict.update({curr_key: curr_list})
+    temp_dict.update({"Section C": inner_temp_dict})
+
+    final_dict = {"Questions": temp_dict}
+
+    json.dump(final_dict, f, ensure_ascii=False, indent=4)
+    f.close()  
+
 make_groups()
-print(len(set_a), len(set_b), len(set_c))
-# for i in set_a:
-#     print(i)
+export_groups_to_json()

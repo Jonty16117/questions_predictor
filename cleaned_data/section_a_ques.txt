@@ -3,7 +3,6 @@ Write one advantage of it.
 Define the term system call.
 List at least four system calls.
 Distinguish b/w user level and kernel level threads.
-What do you mean by time sharing systems. Explain with examples.
 Distinguish b/w logical and physical address space.
 Write at least two advantages of virtual memory.
 Draw the diagram of a acyclic graph directories.
