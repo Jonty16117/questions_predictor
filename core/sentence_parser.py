@@ -89,7 +89,7 @@ def parse_ques_per_group(list_of_ques):
         temp = TextBlob(list_of_ques[i]).words
 
         #lowercase each word
-        temp = [temp.lower() for w in temp]
+        temp = [w.lower() for w in temp]
 
         #singularize and lemmatize each word
         temp = [Word(w).singularize().lemmatize() for w in temp.copy()]
