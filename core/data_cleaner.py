@@ -6,10 +6,10 @@ PROJECT_DIR = os.path.abspath(os.path.join(".", os.pardir))
 RAW_DATA_DIR = PROJECT_DIR + "/raw_data"
 CLEANED_DATA_DIR = PROJECT_DIR + "/cleaned_data"
 
+#importing data from raw_data.txt file to TextBlob
 raw_data = None
 with open(f"{RAW_DATA_DIR}/raw_data.txt") as f:
-	raw_data = f.read()
-
+    raw_data = f.read()
 tb = TextBlob(raw_data)
 
 section_a_ques = []
@@ -20,52 +20,78 @@ currently_in_section_a = False
 currently_in_section_b = False
 currently_in_section_c = False
 
-
 def set_ques_flags(curr_list):
-	curr_str = ''.join(curr_list)
-	if (re.search("(s|S)(e|E)(c|C)(t|T)(i|I)(o|O)(n|N).*[aA]\\s*.*(2).*(20)", curr_str)) is not None:
-		section_a_ques.append(\
-			''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", ''.join(re.findall("[a|A|1|i|I|]{1}[\\)|\\.|].*\\.", curr_str)))))
-		currently_in_section_a = True
-		currently_in_section_b = False
-		currently_in_section_c = False
+    global currently_in_section_a
+    global currently_in_section_b
+    global currently_in_section_c
+    curr_str = ''.join(curr_list)
+    if (re.search("(s|S)(e|E)(c|C)(t|T)(i|I)(o|O)(n|N).*[aA]\\s*.*(2).*(20)", curr_str)) is not None:
+        section_a_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", ''.join(re.findall("[a|A|1|i|I|]{1}[\\)|\\.|].*\\.", curr_str)))))
+        currently_in_section_a = True
+        currently_in_section_b = False
+        currently_in_section_c = False
+        return True
 
-	elif (re.search("(s|S)(e|E)(c|C)(t|T)(i|I)(o|O)(n|N).*[bB]\\s*.*(4|5).*(20)", curr_str)) is not None:
-		section_b_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", curr_str)))
-		currently_in_section_a = False
-		currently_in_section_b = True
-		currently_in_section_c = False
-	
-	elif (re.search("(s|S)(e|E)(c|C)(t|T)(i|I)(o|O)(n|N).*[cC]\\s*.*(10).*(20)", curr_str)) is not None:
-		section_c_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", curr_str)))
-		currently_in_section_a = False
-		currently_in_section_b = False
-		currently_in_section_c = True
+    elif (re.search("(s|S)(e|E)(c|C)(t|T)(i|I)(o|O)(n|N).*[bB]\\s*.*(4|5).*(20)", curr_str)) is not None:
+        section_b_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", curr_str)))
+        currently_in_section_a = False
+        currently_in_section_b = True
+        currently_in_section_c = False
+        return True
 
-for i in tb.sentences:
-	#print(i)
-	set_ques_flags(i)
-	
-	'''
-	if we see "section a", then continue to add all next question
-	to list until we see "section b"	
-	'''
-	# if currently_in_section_a:
-	#     pass
+    elif (re.search("(s|S)(e|E)(c|C)(t|T)(i|I)(o|O)(n|N).*[cC]\\s*.*(10).*(20)", curr_str)) is not None:
+        section_c_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", curr_str)))
+        currently_in_section_a = False
+        currently_in_section_b = False
+        currently_in_section_c = True
+        return True
 
-	'''
-	if we see "section b", then continue to add all next question
-	to list until we see "section c"	
-	'''
-	# else if currently_in_section_b:
-	#     pass
+    else:
+        return False
 
-	'''
-	if we see "section c", then continue to add all next question
-	to list until we see "section a" or end of the string                                                   	
-	'''
-	# else if currently_in_section_c:
-	#     pass
-print(section_a_ques)
-print(section_b_ques)
-print(section_c_ques)
+def get_ques():
+    global section_a_ques
+    global section_b_ques
+    global section_c_ques
+
+    for i in tb.sentences:
+        if set_ques_flags(i):
+            continue
+
+        if currently_in_section_a:
+            section_a_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", str(i))))
+
+        elif currently_in_section_b:
+            section_b_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", str(i))))
+
+        elif currently_in_section_c:
+            section_c_ques.append(''.join(re.findall("[a-z|A-Z][a-z|A-Z].*[\\.|\\?]", str(i))))
+
+def remove_empty_ques():
+    global section_a_ques
+    global section_b_ques
+    global section_c_ques
+
+    section_a_ques = list(filter(None, section_a_ques)) 
+    section_b_ques = list(filter(None, section_b_ques))
+    section_c_ques = list(filter(None, section_c_ques)) 
+
+def save_cleaned_data():
+    global section_a_ques
+    global section_b_ques
+    global section_c_ques
+
+    #saving this cleaned data
+    with open(CLEANED_DATA_DIR + "/section_a_ques" + ".txt", "w") as f:
+        for i in section_a_ques:
+            f.write(i + os.linesep)
+    with open(CLEANED_DATA_DIR + "/section_b_ques" + ".txt", "w") as f:
+        for i in section_b_ques:
+            f.write(i + os.linesep)
+    with open(CLEANED_DATA_DIR + "/section_c_ques" + ".txt", "w") as f:
+        for i in section_c_ques:
+            f.write(i + os.linesep)
+
+get_ques()
+remove_empty_ques()
+save_cleaned_data()

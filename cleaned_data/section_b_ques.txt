@@ -1,0 +1,10 @@
+RIO.Define the term operating system.
+system.
+What do you understand by the layered approach of an operating, System.
+What are the advantages and disadvantages of this approach.
+Explain the four necessary conditions for a deadlock to occur.
+Explain the method of contiguous allocation I detail.
+and disadvantages.
+Assume that we have the following work load shown.
+for this set of processes.
+waiting time?
