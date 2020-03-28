@@ -1,0 +1,69 @@
+What I currently have in mind to solve this problem is
+informaly described below.
+
+Okay, so we have 3 sets of questions:
+-> section_a_ques
+-> section_b_ques
+-> section_c_ques,
+all in the form of sentences, separated by lines
+in 3 different files.
+
+Our target is to find the most (and by most we can
+assume about 5 questions per section) frequently 
+asked questions from each section.Ideally our 
+training test will contain manyquestions of a 
+single type, however if at some point all the next 
+questions are present with the same frequency, 
+select the next ones as in the sequence.
+
+Assuming that there will be many questions asking
+the same thing, but in different way (or syntax),
+one of the possible way to do this can be describe
+using the following procedure as:
+
+1) Compare each question with all other questions
+in each section and make groups for similar types 
+of questions.
+
+2) Select top 5 groups from each section, therefore
+in total there will be 15 groups
+
+3) Parse one question from each group, therefore 
+there will be total 15 questions at the end
+
+4) Store the final questions in the result file
+
+We will now do each step individually. Step one and
+step 3 will be the most difficult to design I think.
+Each of the step will contain many subroutines and 
+algorithms, therefore each step is individually 
+showcased below:
+
+Step 1):
+
+1) Pick one sentence and compare with first (or any) 
+sentence from each group
+
+2) If this sentence matches with any group 
+copy that sentence to that group
+
+3) If this sentence does not matches with any group,
+then create a new group and copy this sentence to 
+this group
+
+Step 2):
+
+1) Just filter the top 5 groups according to their
+length from each section
+
+Step 3):
+
+1) Select the top most question from each group
+
+Step 4):
+
+1) Separate each question in different section
+
+2) Format the final results
+
+3) Produce the final result file in the required format
