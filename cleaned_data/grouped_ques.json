@@ -2,89 +2,205 @@
     "Questions": {
         "Section A": {
             "group 0": [
+                "Explain Time sharing systems.",
+                "Explain Time sharing systems.",
+                "Explain Time sharing systems.",
                 "Explain Time sharing systems."
             ],
             "group 1": [
+                "Write one advantage of it.",
+                "Write one advantage of it.",
+                "Write one advantage of it.",
                 "Write one advantage of it."
             ],
             "group 2": [
+                "Define the term system call.",
+                "Define the term system call.",
+                "Define the term system call.",
                 "Define the term system call."
             ],
             "group 3": [
+                "List at least four system calls.",
+                "List at least four system calls.",
+                "List at least four system calls.",
                 "List at least four system calls."
             ],
             "group 4": [
+                "Distinguish b/w user level and kernel level threads.",
+                "Distinguish b/w user level and kernel level threads.",
+                "Distinguish b/w user level and kernel level threads.",
                 "Distinguish b/w user level and kernel level threads."
             ],
             "group 5": [
+                "Distinguish b/w logical and physical address space.",
+                "Distinguish b/w logical and physical address space.",
+                "Distinguish b/w logical and physical address space.",
                 "Distinguish b/w logical and physical address space."
             ],
             "group 6": [
+                "Write at least two advantages of virtual memory.",
+                "Write at least two advantages of virtual memory.",
+                "Write at least two advantages of virtual memory.",
                 "Write at least two advantages of virtual memory."
             ],
             "group 7": [
+                "Draw the diagram of a acyclic graph directories.",
+                "Draw the diagram of a acyclic graph directories.",
+                "Draw the diagram of a acyclic graph directories.",
                 "Draw the diagram of a acyclic graph directories."
             ],
             "group 8": [
+                "Write at least two advantages of contiguous memory Allocation.",
+                "Write at least two advantages of contiguous memory Allocation.",
+                "Write at least two advantages of contiguous memory Allocation.",
                 "Write at least two advantages of contiguous memory Allocation."
             ],
             "group 9": [
+                "Distinguish between long term and short term scheduler.",
+                "Distinguish between long term and short term scheduler.",
+                "Distinguish between long term and short term scheduler.",
                 "Distinguish between long term and short term scheduler."
             ],
             "group 10": [
+                "Define Access matrix in context of protection.",
+                "Define Access matrix in context of protection.",
+                "Define Access matrix in context of protection.",
                 "Define Access matrix in context of protection."
             ],
             "group 11": [
+                "List four necessary conditions for a deadlock to occur.",
+                "List four necessary conditions for a deadlock to occur.",
+                "List four necessary conditions for a deadlock to occur.",
                 "List four necessary conditions for a deadlock to occur."
             ]
         },
         "Section B": {
             "group 0": [
+                "RIO.Define the term operating system.",
+                "RIO.Define the term operating system.",
+                "RIO.Define the term operating system.",
                 "RIO.Define the term operating system."
             ],
             "group 1": [
+                "system.",
+                "system.",
+                "system.",
                 "system."
             ],
             "group 2": [
+                "What do you understand by the layered approach of an operating, System.",
+                "What do you understand by the layered approach of an operating, System.",
+                "What do you understand by the layered approach of an operating, System.",
                 "What do you understand by the layered approach of an operating, System."
             ],
             "group 3": [
+                "What are the advantages and disadvantages of this approach.",
+                "What are the advantages and disadvantages of this approach.",
+                "What are the advantages and disadvantages of this approach.",
                 "What are the advantages and disadvantages of this approach."
             ],
             "group 4": [
+                "Explain the four necessary conditions for a deadlock to occur.",
+                "Explain the four necessary conditions for a deadlock to occur.",
+                "Explain the four necessary conditions for a deadlock to occur.",
                 "Explain the four necessary conditions for a deadlock to occur."
             ],
             "group 5": [
+                "Explain the method of contiguous allocation I detail.",
+                "Explain the method of contiguous allocation I detail.",
+                "Explain the method of contiguous allocation I detail.",
                 "Explain the method of contiguous allocation I detail."
             ],
             "group 6": [
+                "and disadvantages.",
+                "and disadvantages.",
+                "and disadvantages.",
                 "and disadvantages."
             ],
             "group 7": [
+                "Assume that we have the following work load shown.",
+                "Assume that we have the following work load shown.",
+                "Assume that we have the following work load shown.",
                 "Assume that we have the following work load shown."
             ],
             "group 8": [
+                "for this set of processes.",
+                "for this set of processes.",
+                "for this set of processes.",
                 "for this set of processes."
             ],
             "group 9": [
+                "waiting time?",
+                "waiting time?",
+                "waiting time?",
                 "waiting time?"
             ]
         },
         "Section C": {
             "group 0": [
+                "Explain the various disk scheduling Algorithms in detail.",
+                "Explain the various disk scheduling Algorithms in detail.",
+                "Explain the various disk scheduling Algorithms in detail.",
                 "Explain the various disk scheduling Algorithms in detail."
             ],
             "group 1": [
+                "Explain various OS Components in detail.",
+                "Explain various OS Components in detail.",
+                "Explain various OS Components in detail.",
                 "Explain various OS Components in detail."
             ],
             "group 2": [
+                "Under what circumstances page fault occur.",
+                "Under what circumstances page fault occur.",
+                "Under what circumstances page fault occur.",
                 "Under what circumstances page fault occur."
             ],
             "group 3": [
+                "LRU with four free frames which are empty initially.",
+                "LRU with four free frames which are empty initially.",
+                "LRU with four free frames which are empty initially.",
                 "LRU with four free frames which are empty initially."
             ],
             "group 4": [
+                "the minimum number of page faults?",
+                "the minimum number of page faults?",
+                "the minimum number of page faults?",
                 "the minimum number of page faults?"
+            ],
+            "group 5": [
+                "Total No.",
+                "Total No.",
+                "Total No."
+            ],
+            "group 6": [
+                "of Questions : 09] [Total No.",
+                "of Questions : 09] [Total No.",
+                "of Questions : 09] [Total No."
+            ],
+            "group 7": [
+                "Tech.",
+                "Tech.",
+                "Tech."
+            ],
+            "group 8": [
+                "Sem.",
+                "Sem.",
+                "Sem."
+            ],
+            "group 9": [
+                "SUBJECT CODE : DE - 3.1 (D.E.",
+                "SUBJECT CODE : DE - 3.1 (D.E.",
+                "SUBJECT CODE : DE - 3.1 (D.E."
+            ],
+            "group 10": [
+                "Section - Ais Compulsory.",
+                "Section - Ais Compulsory.",
+                "Section - Ais Compulsory."
+            ],
+            "group 11": [
+                "Attempt any Four questions from Section - B.",
+                "Attempt any Four questions from Section - B.",
+                "Attempt any Four questions from Section - B."
             ]
         }
     }

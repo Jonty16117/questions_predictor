@@ -88,4 +88,274 @@ the minimum number of page faults?
 
 HH
 
+R-397 2us)
+
+ROI ING: ssasssssseasesscnncass
+Total No. of Questions : 09] [Total No. of Pages : 02
+B.Tech. (Sem. - 7/8")
+OPERATING SYSTEMS
+SUBJECT CODE : DE - 3.1 (D.E. - Ti)
+Paper ID : [A0335]
+[Note : Please fill subject code and paper ID on OMR]
+
+Time : 03 Hours Maximum Marks : 60
+Instruction to Candidates:
+
+1) Section - Ais Compulsory.
+
+2) Attempt any Four questions from Section - B.
+
+3) Attempt any Two questions from Section - C.
+
+Section - A
+(10 x 2=20)
+
+Ql)
+
+a) Explain Time sharing systems. Write one advantage of it.
+
+b) Define the term system call. List at least four system calls.
+
+c) Distinguish b/w user level and kernel level threads.
+
+d) Distinguish b/w logical and physical address space.
+
+e) Write at least two advantages of virtual memory.
+
+f) Draw the diagram of a acyclic graph directories.
+
+g) Write at least two advantages of contiguous memory Allocation.
+
+h) Distinguish between long term and short term scheduler.
+
+i) Define Access matrix in context of protection.
+
+j) List four necessary conditions for a deadlock to occur.
+
+R-397
+
+RIO.Section - B
+(4x 5 = 20)
+
+Q2) Define the term operating system. Write at least four functions of an operating
+system.
+
+03) What do you understand by the layered approach of an operating, System.
+What are the advantages and disadvantages of this approach.
+
+04) Explain the four necessary conditions for a deadlock to occur.
+
+Q5) Explain the method of contiguous allocation I detail. Also write its advantages
+and disadvantages.
+
+Q6) Assume that we have the following work load shown. All five processes
+arrive at time 0, in the order given, with the length of the CPU-burst time given
+
+in milliseconds
+Process Burst time
+Pi 10
+P2 29
+P3 3
+P4 7
+P5 12
+
+Consider the FCFS, SJF and RR (quantum = 10ms) scheduling algorithms
+for this set of processes. Which algorithm would give the minimum average
+waiting time?
+
+Section - C
+(2 x 10 = 20)
+
+Q7) Explain the various disk scheduling Algorithms in detail.
+Q8) Explain various OS Components in detail.
+
+Q9) Under what circumstances page fault occur. Consider the following reference
+string
+1,253, 45.2; 1, 5, 6,2, 152, 3. 7,6, 3,2, 1, 2, 336
+Find the number of Page Faults with FIFO, Optimal Page replacement and
+LRU with four free frames which are empty initially. Which algorithm gives
+the minimum number of page faults?
+
+HH
+
+R-397 2us)
+
+ROI ING: ssasssssseasesscnncass
+Total No. of Questions : 09] [Total No. of Pages : 02
+B.Tech. (Sem. - 7/8")
+OPERATING SYSTEMS
+SUBJECT CODE : DE - 3.1 (D.E. - Ti)
+Paper ID : [A0335]
+[Note : Please fill subject code and paper ID on OMR]
+
+Time : 03 Hours Maximum Marks : 60
+Instruction to Candidates:
+
+1) Section - Ais Compulsory.
+
+2) Attempt any Four questions from Section - B.
+
+3) Attempt any Two questions from Section - C.
+
+Section - A
+(10 x 2=20)
+
+Ql)
+
+a) Explain Time sharing systems. Write one advantage of it.
+
+b) Define the term system call. List at least four system calls.
+
+c) Distinguish b/w user level and kernel level threads.
+
+d) Distinguish b/w logical and physical address space.
+
+e) Write at least two advantages of virtual memory.
+
+f) Draw the diagram of a acyclic graph directories.
+
+g) Write at least two advantages of contiguous memory Allocation.
+
+h) Distinguish between long term and short term scheduler.
+
+i) Define Access matrix in context of protection.
+
+j) List four necessary conditions for a deadlock to occur.
+
+R-397
+
+RIO.Section - B
+(4x 5 = 20)
+
+Q2) Define the term operating system. Write at least four functions of an operating
+system.
+
+03) What do you understand by the layered approach of an operating, System.
+What are the advantages and disadvantages of this approach.
+
+04) Explain the four necessary conditions for a deadlock to occur.
+
+Q5) Explain the method of contiguous allocation I detail. Also write its advantages
+and disadvantages.
+
+Q6) Assume that we have the following work load shown. All five processes
+arrive at time 0, in the order given, with the length of the CPU-burst time given
+
+in milliseconds
+Process Burst time
+Pi 10
+P2 29
+P3 3
+P4 7
+P5 12
+
+Consider the FCFS, SJF and RR (quantum = 10ms) scheduling algorithms
+for this set of processes. Which algorithm would give the minimum average
+waiting time?
+
+Section - C
+(2 x 10 = 20)
+
+Q7) Explain the various disk scheduling Algorithms in detail.
+Q8) Explain various OS Components in detail.
+
+Q9) Under what circumstances page fault occur. Consider the following reference
+string
+1,253, 45.2; 1, 5, 6,2, 152, 3. 7,6, 3,2, 1, 2, 336
+Find the number of Page Faults with FIFO, Optimal Page replacement and
+LRU with four free frames which are empty initially. Which algorithm gives
+the minimum number of page faults?
+
+HH
+
+R-397 2us)
+
+ROI ING: ssasssssseasesscnncass
+Total No. of Questions : 09] [Total No. of Pages : 02
+B.Tech. (Sem. - 7/8")
+OPERATING SYSTEMS
+SUBJECT CODE : DE - 3.1 (D.E. - Ti)
+Paper ID : [A0335]
+[Note : Please fill subject code and paper ID on OMR]
+
+Time : 03 Hours Maximum Marks : 60
+Instruction to Candidates:
+
+1) Section - Ais Compulsory.
+
+2) Attempt any Four questions from Section - B.
+
+3) Attempt any Two questions from Section - C.
+
+Section - A
+(10 x 2=20)
+
+Ql)
+
+a) Explain Time sharing systems. Write one advantage of it.
+
+b) Define the term system call. List at least four system calls.
+
+c) Distinguish b/w user level and kernel level threads.
+
+d) Distinguish b/w logical and physical address space.
+
+e) Write at least two advantages of virtual memory.
+
+f) Draw the diagram of a acyclic graph directories.
+
+g) Write at least two advantages of contiguous memory Allocation.
+
+h) Distinguish between long term and short term scheduler.
+
+i) Define Access matrix in context of protection.
+
+j) List four necessary conditions for a deadlock to occur.
+
+R-397
+
+RIO.Section - B
+(4x 5 = 20)
+
+Q2) Define the term operating system. Write at least four functions of an operating
+system.
+
+03) What do you understand by the layered approach of an operating, System.
+What are the advantages and disadvantages of this approach.
+
+04) Explain the four necessary conditions for a deadlock to occur.
+
+Q5) Explain the method of contiguous allocation I detail. Also write its advantages
+and disadvantages.
+
+Q6) Assume that we have the following work load shown. All five processes
+arrive at time 0, in the order given, with the length of the CPU-burst time given
+
+in milliseconds
+Process Burst time
+Pi 10
+P2 29
+P3 3
+P4 7
+P5 12
+
+Consider the FCFS, SJF and RR (quantum = 10ms) scheduling algorithms
+for this set of processes. Which algorithm would give the minimum average
+waiting time?
+
+Section - C
+(2 x 10 = 20)
+
+Q7) Explain the various disk scheduling Algorithms in detail.
+Q8) Explain various OS Components in detail.
+
+Q9) Under what circumstances page fault occur. Consider the following reference
+string
+1,253, 45.2; 1, 5, 6,2, 152, 3. 7,6, 3,2, 1, 2, 336
+Find the number of Page Faults with FIFO, Optimal Page replacement and
+LRU with four free frames which are empty initially. Which algorithm gives
+the minimum number of page faults?
+
+HH
+
 R-397 2
