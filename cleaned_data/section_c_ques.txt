@@ -1,0 +1,41 @@
+Explain the various disk scheduling Algorithms in detail.
+Explain various OS Components in detail.
+Under what circumstances page fault occur.
+LRU with four free frames which are empty initially.
+the minimum number of page faults?
+Total No.
+of Questions : 09] [Total No.
+Tech.
+Sem.
+SUBJECT CODE : DE - 3.1 (D.E.
+Section - Ais Compulsory.
+Attempt any Four questions from Section - B.
+Explain the various disk scheduling Algorithms in detail.
+Explain various OS Components in detail.
+Under what circumstances page fault occur.
+LRU with four free frames which are empty initially.
+the minimum number of page faults?
+Total No.
+of Questions : 09] [Total No.
+Tech.
+Sem.
+SUBJECT CODE : DE - 3.1 (D.E.
+Section - Ais Compulsory.
+Attempt any Four questions from Section - B.
+Explain the various disk scheduling Algorithms in detail.
+Explain various OS Components in detail.
+Under what circumstances page fault occur.
+LRU with four free frames which are empty initially.
+the minimum number of page faults?
+Total No.
+of Questions : 09] [Total No.
+Tech.
+Sem.
+SUBJECT CODE : DE - 3.1 (D.E.
+Section - Ais Compulsory.
+Attempt any Four questions from Section - B.
+Explain the various disk scheduling Algorithms in detail.
+Explain various OS Components in detail.
+Under what circumstances page fault occur.
+LRU with four free frames which are empty initially.
+the minimum number of page faults?
