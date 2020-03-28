@@ -6,39 +6,6 @@ PROJECT_DIR = os.path.abspath(os.path.join(".", os.pardir))
 CLEANED_DATA_DIR = PROJECT_DIR + "/cleaned_data"
 RESULTS_DIR = PROJECT_DIR + "/results"
 
-q = "Distinguish between long term and\
- short term scheduler.Distinguish between \
- long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term \n\n\n\n\n\n\n\n\n\n\n\nand short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish "
-
-class PDF(FPDF):
-    def header(self):
-        # Select Arial bold 15
-        self.set_font('Arial', 'B', 15)
-        # Move to the right
-        self.cell(80)
-        # Framed title
-        self.cell(30, 10, 'Title', 1, 0, 'C')
-        # Line break
-        self.ln(20)
-
-
 ques_set_1 = {}
 ques_set_2 = {}
 ques_set_3 = {}
