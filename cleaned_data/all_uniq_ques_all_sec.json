@@ -1,0 +1,31 @@
+{
+    "Questions": [
+        "waiting time?",
+        "Distinguish between long term and short term scheduler.",
+        "for this set of processes.",
+        "Write at least two advantages of contiguous memory Allocation.",
+        "Assume that we have the following work load shown.",
+        "Draw the diagram of a acyclic graph directories.",
+        "and disadvantages.",
+        "Write at least two advantages of virtual memory.",
+        "Explain the method of contiguous allocation I detail.",
+        "Distinguish b/w logical and physical address space.",
+        "the minimum number of page faults?",
+        "Explain the four necessary conditions for a deadlock to occur.",
+        "Distinguish b/w user level and kernel level threads.",
+        "LRU with four free frames which are empty initially.",
+        "What are the advantages and disadvantages of this approach.",
+        "List at least four system calls.",
+        "Under what circumstances page fault occur.",
+        "What do you understand by the layered approach of an operating, System.",
+        "Define the term system call.",
+        "List four necessary conditions for a deadlock to occur.",
+        "Define Access matrix in context of protection.",
+        "Explain various OS Components in detail.",
+        "system.",
+        "Write one advantage of it.",
+        "Explain the various disk scheduling Algorithms in detail.",
+        "RIO.Define the term operating system.",
+        "Explain Time sharing systems."
+    ]
+}

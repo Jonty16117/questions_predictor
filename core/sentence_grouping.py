@@ -59,13 +59,7 @@ length from each section
 
 Step 3):
 
-1) Make a grammar from the given language to make one
-final question from each group
-
-2) Parse a sentence from this grammar using parse tree
-for each group
-
-3) Save this sentence
+1) Select the top most question from each group
 
 Step 4):
 

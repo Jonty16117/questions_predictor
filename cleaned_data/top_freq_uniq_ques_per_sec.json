@@ -1,0 +1,25 @@
+{
+    "Questions": {
+        "Section A": [
+            "Distinguish between long term and short term scheduler.",
+            "Write at least two advantages of contiguous memory Allocation.",
+            "Draw the diagram of a acyclic graph directories.",
+            "Write at least two advantages of virtual memory.",
+            "Distinguish b/w logical and physical address space."
+        ],
+        "Section B": [
+            "waiting time?",
+            "for this set of processes.",
+            "Assume that we have the following work load shown.",
+            "and disadvantages.",
+            "Explain the method of contiguous allocation I detail."
+        ],
+        "Section C": [
+            "the minimum number of page faults?",
+            "LRU with four free frames which are empty initially.",
+            "Under what circumstances page fault occur.",
+            "Explain various OS Components in detail.",
+            "Explain the various disk scheduling Algorithms in detail."
+        ]
+    }
+}
