@@ -8,7 +8,6 @@ from tqdm import tqdm
 PROJECT_DIR = os.path.abspath(os.path.join(".", os.pardir))
 RAW_DATA_DIR = PROJECT_DIR + "/raw_data"
 CLEANED_DATA_DIR = PROJECT_DIR + "/cleaned_data"
-RAW_DATA_DIR = PROJECT_DIR + "/raw_data"
 
 #importing data from raw_data.txt file to TextBlob
 raw_data = None
