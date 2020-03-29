@@ -1,5 +1,7 @@
 import os
 import json
+import time
+from tqdm import tqdm
 
 QUES_TO_SELECT_PER_SEC_IN_SEC_A = 5
 QUES_TO_SELECT_PER_SEC_IN_SEC_B = 5
@@ -189,15 +191,48 @@ def generate_all_ques_with_dup():
         json.dump(final_dict, f, \
             ensure_ascii=False, indent=4)
 
+def collective_execution():
+    #for loading bar
+    pbar = tqdm(total=100)
 
-get_data_from_file()
-find_group_len()
-sort_groups_acc_to_ques_len()
-making_sorted_single_group_of_all_ques()
-set_no_of_ques_to_select()
+    get_data_from_file()
+    time.sleep(0.1)
+    pbar.update(11.1)
 
-generate_top_freq_ques_per_sec(n_sec_a, n_sec_b, n_sec_c)
-generate_top_freq_ques_all_sec(10)
-generate_all_ques_no_dup()
-generate_all_ques_with_dup()
+    find_group_len()
+    time.sleep(0.1)
+    pbar.update(11.1)
 
+    sort_groups_acc_to_ques_len()
+    time.sleep(0.1)
+    pbar.update(11.1)
+
+    making_sorted_single_group_of_all_ques()
+    time.sleep(0.1)
+    pbar.update(11.1)
+
+    set_no_of_ques_to_select()
+    time.sleep(0.1)
+    pbar.update(11.1)
+
+    generate_top_freq_ques_per_sec(n_sec_a, n_sec_b, n_sec_c)
+    time.sleep(0.1)
+    pbar.update(11.1)
+
+    generate_top_freq_ques_all_sec(10)
+    time.sleep(0.1)
+    pbar.update(11.1)
+
+    generate_all_ques_no_dup()
+    time.sleep(0.1)
+    pbar.update(11.1)
+
+    generate_all_ques_with_dup()
+    time.sleep(0.1)
+    pbar.update(11.1)
+
+    pbar.close()
+
+    print()
+
+collective_execution()

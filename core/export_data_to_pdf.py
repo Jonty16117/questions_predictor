@@ -1,5 +1,7 @@
 import os
 import json
+import time
+from tqdm import tqdm
 from fpdf import FPDF
 
 PROJECT_DIR = os.path.abspath(os.path.join(".", os.pardir))
@@ -178,6 +180,18 @@ def make_pdf():
     #saving the resultant file
     pdf.output(RESULTS_DIR + '/results.pdf', 'F')
 
+def collective_execution():
+    
+    pbar = tqdm(total=100)
+    time.sleep(0.2)
+    pbar.update(47)
+    time.sleep(0.2)
+    pbar.update(53)
+    pbar.close()
 
-get_data_from_json()
-make_pdf()
+    get_data_from_json()
+    make_pdf()
+
+    print()
+
+collective_execution()
