@@ -1,43 +1,12 @@
 import os
 import json
+import time
+from tqdm import tqdm
 from fpdf import FPDF
 
 PROJECT_DIR = os.path.abspath(os.path.join(".", os.pardir))
 CLEANED_DATA_DIR = PROJECT_DIR + "/cleaned_data"
 RESULTS_DIR = PROJECT_DIR + "/results"
-
-q = "Distinguish between long term and\
- short term scheduler.Distinguish between \
- long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term \n\n\n\n\n\n\n\n\n\n\n\nand short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish \
- between long term and short term schedulerDistinguish "
-
-class PDF(FPDF):
-    def header(self):
-        # Select Arial bold 15
-        self.set_font('Arial', 'B', 15)
-        # Move to the right
-        self.cell(80)
-        # Framed title
-        self.cell(30, 10, 'Title', 1, 0, 'C')
-        # Line break
-        self.ln(20)
-
 
 ques_set_1 = {}
 ques_set_2 = {}
@@ -211,6 +180,18 @@ def make_pdf():
     #saving the resultant file
     pdf.output(RESULTS_DIR + '/results.pdf', 'F')
 
+def collective_execution():
+    
+    pbar = tqdm(total=100)
+    time.sleep(0.2)
+    pbar.update(47)
+    time.sleep(0.2)
+    pbar.update(53)
+    pbar.close()
 
-get_data_from_json()
-make_pdf()
+    get_data_from_json()
+    make_pdf()
+
+    print()
+
+collective_execution()

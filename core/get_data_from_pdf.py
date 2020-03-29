@@ -1,7 +1,6 @@
 import os
 import pytesseract
 import time
-import math
 from tqdm import tqdm
 from pdf2image import convert_from_path
 try:
@@ -25,7 +24,7 @@ for i in os.listdir(TRAINING_DATA_DIR):
     images = convert_from_path(src_file_dir, jpegopt='jpeg')
 
     pbar = tqdm(total=100)
-    pbar_len = math.ceil(100 // len(images))
+    pbar_len = 100 / len(images)
 
     for j in images:
         
@@ -48,9 +47,9 @@ for i in os.listdir(TRAINING_DATA_DIR):
         #removing the left over image(temp) file
         os.remove(f"{RAW_DATA_DIR}/temp.jpeg")
 
+    pbar.close()
+
 #closing the raw data file
 result_file.close()
 
-pbar.close()
-
-print(f"Read {len(os.listdir(TRAINING_DATA_DIR))} file\\s")
+print(f"Read {len(os.listdir(TRAINING_DATA_DIR))} file\\s\n")
