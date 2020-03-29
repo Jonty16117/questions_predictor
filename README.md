@@ -28,7 +28,11 @@ You first need to install WSL(Windows Subsystem for Linux) and then follow the s
 The pdf files from which questions are to be analysed can either be scanned pdf (pdf's that contain images) or text pdf's. The program can automatically understand either of them. However any other format is not supported as of now. I will be adding the support for file types such as .doc, txt, jpeg, jpg, png, etc later. But since most of the question papers are in pdf format, most of you will be fine.
 
 # Final note:  
-The output of the program will be more helpul if you add as many question papers to the training set. And finally, if you want to score even more marks, then don't use this program :stuck_out_tongue_winking_eye: 
+The output of the program will be more helpul if you add as many question papers to the training set. And finally, if you want to score even more marks, then don't use this program :stuck_out_tongue_winking_eye:  
+
+Also feel free to fork, star and contribute :v: :blush: :v:.
+
+
 
 
 
