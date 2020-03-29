@@ -30,7 +30,7 @@ The pdf files from which questions are to be analysed can either be scanned pdf 
 # Final note:  
 The output of the program will be more helpul if you add as many question papers to the training set. And finally, if you want to score even more marks, then don't use this program :stuck_out_tongue_winking_eye:  
 
-Also feel free to fork, star and contribute :v: :blush: :v:.
+Also feel free to fork, star and contribute [questions_predictor](https://github.com/Jonty16117/questions_predictor) :v: :blush: :v:.
 
 
 
